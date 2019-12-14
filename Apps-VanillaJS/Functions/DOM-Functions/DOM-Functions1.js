@@ -9,7 +9,7 @@
         //     title.classList.remove(clickedClass);
         // } else {
         //     title.classList.add(clickedClass);
-        // }
+        // } 
     };
 
     var init = function() {
