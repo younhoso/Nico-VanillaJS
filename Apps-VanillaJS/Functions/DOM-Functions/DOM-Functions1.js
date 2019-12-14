@@ -1,4 +1,13 @@
 (function(){
+    var list = document.querySelectorAll('.list li');
+    for(var i = 0; i < list.length; i++) {
+        list[i].addEventListener('click', function(){
+            this.style.color = 'blue'
+        });
+    }
+    
+
+
     var title = document.querySelector('.title');
     var clickedClass = "clicked";
 
