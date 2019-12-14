@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    (function(){
+    var title = document.querySelector('.title');
+    var Base_color = "rgb(52, 73, 94)";
+    var Other_color = "#7f8c8d";
+
+    title.innerHTML = "Hi Form JS"
+    title.style.fontSize = '12px';
+    document.title = 'I'
+    console.log(title);
+    console.dir(document); //console.dir는 돔요소에서 가지고 있는 모든 객체를 볼수 있다. 내가 사용가능한 객체들이다.
+    console.dir(title);
+
+    var handleC = function() {
+        var curren = title.style.color;
+        if(curren === Base_color) {
+            title.style.color = Other_color;
+        } else {
+            title.style.color = Base_color;
+        }
+    };
+
+    var init = function(){
+        title.style.color = Base_color;
+        title.addEventListener('click', handleC)
+    };
+    init();
+
+    var offLineHand = function() {
+        console.log('lalalala');
+    };
+
+    var onLineHand = function() {
+        console.log('welcome back');
+    };
+
+    window.addEventListener('offline', offLineHand); // offline는 인터넷 끔 이벤트
+    window.addEventListener('online', onLineHand)    // online는  인터넷 켬 이벤트
+})();
+</script>
+</body>
+</html>
+
+
+   

@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    (function(){
+        function sayHello(name, age) {
+            return `Hello ${name} you are ${age} years old`;
+        };
+        var green = sayHello('Nicolas', 17); // 함수 실행한것을 변수에 담아 1)
+        console.log(green)
+
+        function hi() {                     // 다른 함수에서도 재사용가능하다. 2)
+            return green;
+        };
+        var green2 = hi();
+        console.log(green2)
+        /* 이 방법은 하나의 함수 정의 한것을 (한가지 값으로만) 여러곳에서 사용 가능하다.
+            (값을 변경하면 사용하는 쪽에서 한큐에 모두 바뀐다.)
+        */
+    })();
+</script>
+</body>
+</html>
+
+
+   
